@@ -1,0 +1,21 @@
+name: northmoor
+services:
+  postgres:
+    image: pgvector/pgvector:0.8.7-pg16
+    environment:
+      POSTGRES_USER: northmoor
+      POSTGRES_PASSWORD: northmoor # local only
+      POSTGRES_DB: northmoor
+    ports:
+      - '127.0.0.1:${POSTGRES_PORT:-5433}:5432'
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./docker/postgres:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      # -h forces TCP: the init-phase server only listens on the socket, so this waits for the real one.
+      test: ['CMD-SHELL', 'pg_isready -h 127.0.0.1 -U northmoor -d northmoor']
+      interval: 2s
+      timeout: 3s
+      retries: 30
+volumes:
+  pgdata:
