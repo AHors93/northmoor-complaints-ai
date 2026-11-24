@@ -1,0 +1,8 @@
+packages:
+  - packages/*
+  - services/*
+  - data/generator
+  - evals
+allowBuilds:
+  # Not needed: the prepare script installs the hooks.
+  lefthook: false
