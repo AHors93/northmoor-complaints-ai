@@ -1,0 +1,19 @@
+node_modules/
+dist/
+coverage/
+.env
+.env.*
+!.env.example
+.local/
+*.tsbuildinfo
+.DS_Store
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+# Data: only the small sample is committed
+data/generated/*
+!data/generated/sample/
+data/raw/*
+!data/raw/README.md
