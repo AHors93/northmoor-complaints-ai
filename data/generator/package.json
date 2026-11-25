@@ -2,5 +2,13 @@
   "name": "@northmoor/data-generator",
   "version": "0.0.0",
   "private": true,
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@faker-js/faker": "10.6.0",
+    "@northmoor/shared": "workspace:*",
+    "pdfkit": "0.21.0"
+  },
+  "devDependencies": {
+    "@types/pdfkit": "0.17.7"
+  }
 }

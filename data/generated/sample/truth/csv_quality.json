@@ -1,0 +1,39 @@
+{
+  "rows": 21,
+  "uniqueComplaints": 20,
+  "duplicates": [
+    {
+      "row": 21,
+      "originalRow": 20,
+      "complaintId": "NML-00368",
+      "kind": "altered"
+    }
+  ],
+  "labelMapping": {
+    "customer service": "service",
+    "Arrears": "arrears",
+    "arrears": "arrears",
+    "Collections": "arrears",
+    "FEES ": "fees",
+    "Mis-selling": "mis_selling",
+    "Cust Svc": "service",
+    "charges": "fees",
+    "missold": "mis_selling"
+  },
+  "labelCounts": {
+    "customer service": 5,
+    "Arrears": 3,
+    "arrears": 1,
+    "Collections": 4,
+    "FEES ": 3,
+    "Mis-selling": 1,
+    "Cust Svc": 1,
+    "charges": 1,
+    "missold": 2
+  },
+  "dateFormatCounts": {
+    "iso": 10,
+    "uk_slash": 5,
+    "long": 6
+  }
+}

@@ -12,6 +12,8 @@
     "prepare": "lefthook install",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
+    "gen": "node --experimental-strip-types --disable-warning=ExperimentalWarning data/generator/src/cli.ts",
+    "gen:sample": "pnpm gen --sample",
     "db:up": "docker compose up -d --wait",
     "db:down": "docker compose down"
   },
