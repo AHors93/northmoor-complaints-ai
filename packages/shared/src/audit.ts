@@ -9,8 +9,8 @@ export interface AuditClient {
 }
 
 /**
- * Local development only: appends JSON lines to a file. It isn't tamper-proof; the S3 Object Lock
- * client replaces it in Phase 2.
+ * Local development only: appends JSON lines to a file. It isn't tamper-proof; deployed services use
+ * S3AuditClient with Object Lock.
  */
 export class FileAuditClient implements AuditClient {
   readonly #path: string;
