@@ -23,3 +23,9 @@ a time.
 
 Each phase is a pull request that has to pass its "done when" checks, and I review it before the next
 one starts. Significant decisions are recorded in [docs/adr](docs/adr).
+
+## Security checks
+
+Every pull request runs secret scanning, dependency review, a vulnerability audit, workflow linting and
+CodeQL, and `main` only accepts pull requests that pass. See
+[ADR 0004](docs/adr/0004-ci-security-checks.md).

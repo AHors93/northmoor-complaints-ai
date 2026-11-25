@@ -7,3 +7,5 @@ pre-commit:
       run: pnpm typecheck
     - name: secrets
       run: sh tools/secrets-scan.sh --staged
+    - name: repo-safety
+      run: pnpm vitest run tools/repo-safety.test.ts
