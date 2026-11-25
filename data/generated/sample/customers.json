@@ -1,0 +1,422 @@
+[
+  {
+    "id": "CUST-00068",
+    "fullName": "Eulah Thornton",
+    "dateOfBirth": "1993-07-20",
+    "address": {
+      "line1": "114 Wood Road",
+      "town": "Norwich",
+      "postcode": "NR4 5TE"
+    },
+    "email": "eulah.thornton@example.org",
+    "phone": "0161 496 0976",
+    "account": {
+      "accountNumber": "42612373",
+      "sortCode": "86-43-43",
+      "product": "personal_loan",
+      "balancePence": 182563,
+      "arrearsPence": 21195,
+      "arrearsStatus": "three_or_more_missed",
+      "openedOn": "2025-08-01"
+    }
+  },
+  {
+    "id": "CUST-00088",
+    "fullName": "Sigmund Rees",
+    "dateOfBirth": "1973-09-17",
+    "address": {
+      "line1": "151 Nowak Avenue",
+      "town": "Glasgow",
+      "postcode": "G8 6DB"
+    },
+    "email": "sigmund_rees89@example.net",
+    "phone": "0121 496 0080",
+    "account": {
+      "accountNumber": "50170672",
+      "sortCode": "46-87-57",
+      "product": "personal_loan",
+      "balancePence": 777977,
+      "arrearsPence": 23750,
+      "arrearsStatus": "one_missed",
+      "openedOn": "2025-08-01"
+    }
+  },
+  {
+    "id": "CUST-00364",
+    "fullName": "Vernice Harrison",
+    "dateOfBirth": "1962-10-23",
+    "address": {
+      "line1": "96 Turner Avenue",
+      "town": "Sheffield",
+      "postcode": "S9 2AD"
+    },
+    "email": "vernice.harrison42@example.org",
+    "phone": "07700 900312",
+    "account": {
+      "accountNumber": "64771708",
+      "sortCode": "75-44-67",
+      "product": "car_finance",
+      "balancePence": 1120320,
+      "arrearsPence": 158055,
+      "arrearsStatus": "three_or_more_missed",
+      "openedOn": "2025-01-01"
+    }
+  },
+  {
+    "id": "CUST-00406",
+    "fullName": "Emmanuelle Smith-Evans",
+    "dateOfBirth": "1996-12-27",
+    "address": {
+      "line1": "156 Jones Close",
+      "town": "Newcastle upon Tyne",
+      "postcode": "NE1 5QA"
+    },
+    "email": "emmanuelle.smithevans@example.com",
+    "phone": "0161 496 0678",
+    "account": {
+      "accountNumber": "96708008",
+      "sortCode": "63-86-54",
+      "product": "personal_loan",
+      "balancePence": 638693,
+      "arrearsPence": 0,
+      "arrearsStatus": "up_to_date",
+      "openedOn": "2025-08-01"
+    }
+  },
+  {
+    "id": "CUST-00434",
+    "fullName": "Margaretta Henderson",
+    "dateOfBirth": "1999-01-25",
+    "address": {
+      "line1": "176 Edwards Lane",
+      "town": "Nottingham",
+      "postcode": "NG8 4TD"
+    },
+    "email": "margaretta.henderson@example.org",
+    "phone": "0121 496 0514",
+    "account": {
+      "accountNumber": "75639283",
+      "sortCode": "60-35-14",
+      "product": "personal_loan",
+      "balancePence": 96548,
+      "arrearsPence": 37104,
+      "arrearsStatus": "three_or_more_missed",
+      "openedOn": "2024-12-01"
+    }
+  },
+  {
+    "id": "CUST-00580",
+    "fullName": "Adrienne Edwards",
+    "dateOfBirth": "2002-04-22",
+    "address": {
+      "line1": "161 Simpson Road",
+      "town": "Sheffield",
+      "postcode": "S11 4DH"
+    },
+    "email": "adrienne.edwards@example.net",
+    "phone": "020 7946 0659",
+    "account": {
+      "accountNumber": "13118393",
+      "sortCode": "34-51-78",
+      "product": "car_finance",
+      "balancePence": 1631399,
+      "arrearsPence": 0,
+      "arrearsStatus": "up_to_date",
+      "openedOn": "2025-05-01"
+    }
+  },
+  {
+    "id": "CUST-00698",
+    "fullName": "Hailie O'Brien",
+    "dateOfBirth": "1989-12-20",
+    "address": {
+      "line1": "19 Kelly Street",
+      "town": "Bristol",
+      "postcode": "BS13 9ZJ"
+    },
+    "email": "hailie_obrien67@example.net",
+    "phone": "0161 496 0378",
+    "account": {
+      "accountNumber": "55439777",
+      "sortCode": "38-47-38",
+      "product": "car_finance",
+      "balancePence": 1546330,
+      "arrearsPence": 0,
+      "arrearsStatus": "up_to_date",
+      "openedOn": "2025-08-01"
+    }
+  },
+  {
+    "id": "CUST-00830",
+    "fullName": "Magnolia Henderson",
+    "dateOfBirth": "1965-05-13",
+    "address": {
+      "line1": "109 Fraser Close",
+      "town": "Leeds",
+      "postcode": "LS18 3HA"
+    },
+    "email": "magnolia.henderson66@example.net",
+    "phone": "0161 496 0787",
+    "account": {
+      "accountNumber": "14664638",
+      "sortCode": "80-66-87",
+      "product": "personal_loan",
+      "balancePence": 987531,
+      "arrearsPence": 139446,
+      "arrearsStatus": "three_or_more_missed",
+      "openedOn": "2024-12-01"
+    }
+  },
+  {
+    "id": "CUST-00920",
+    "fullName": "Luke Watson",
+    "dateOfBirth": "1987-08-27",
+    "address": {
+      "line1": "2 Smith-Evans Lane",
+      "town": "Bristol",
+      "postcode": "BS12 4TG"
+    },
+    "email": "luke_watson@example.net",
+    "phone": "0121 496 0182",
+    "account": {
+      "accountNumber": "70413598",
+      "sortCode": "67-55-41",
+      "product": "car_finance",
+      "balancePence": 1514870,
+      "arrearsPence": 40539,
+      "arrearsStatus": "one_missed",
+      "openedOn": "2025-04-01"
+    }
+  },
+  {
+    "id": "CUST-00935",
+    "fullName": "Leone Bowen",
+    "dateOfBirth": "1987-07-22",
+    "address": {
+      "line1": "122 Griffiths Road",
+      "town": "Glasgow",
+      "postcode": "G4 4YL"
+    },
+    "email": "leone_bowen12@example.com",
+    "phone": "020 7946 0640",
+    "account": {
+      "accountNumber": "11050537",
+      "sortCode": "82-68-26",
+      "product": "car_finance",
+      "balancePence": 940259,
+      "arrearsPence": 0,
+      "arrearsStatus": "up_to_date",
+      "openedOn": "2025-02-01"
+    }
+  },
+  {
+    "id": "CUST-00965",
+    "fullName": "Mindy Hussain",
+    "dateOfBirth": "1974-08-02",
+    "address": {
+      "line1": "57 Ryan Avenue",
+      "town": "Sheffield",
+      "postcode": "S4 3YR"
+    },
+    "email": "mindy.hussain@example.net",
+    "phone": "0117 496 0842",
+    "account": {
+      "accountNumber": "33033939",
+      "sortCode": "70-30-38",
+      "product": "car_finance",
+      "balancePence": 1487830,
+      "arrearsPence": 0,
+      "arrearsStatus": "up_to_date",
+      "openedOn": "2025-04-01"
+    }
+  },
+  {
+    "id": "CUST-01017",
+    "fullName": "Camren Marshall",
+    "dateOfBirth": "1991-02-11",
+    "address": {
+      "line1": "164 Stewart Close",
+      "town": "Nottingham",
+      "postcode": "NG6 8LU"
+    },
+    "email": "camren_marshall@example.com",
+    "phone": "07700 900503",
+    "account": {
+      "accountNumber": "58652340",
+      "sortCode": "77-75-44",
+      "product": "car_finance",
+      "balancePence": 766138,
+      "arrearsPence": 0,
+      "arrearsStatus": "up_to_date",
+      "openedOn": "2025-05-01"
+    }
+  },
+  {
+    "id": "CUST-01027",
+    "fullName": "Keshawn Haworth",
+    "dateOfBirth": "1997-10-15",
+    "address": {
+      "line1": "85 Hall Street",
+      "town": "Bristol",
+      "postcode": "BS14 0FZ"
+    },
+    "email": "keshawn_haworth3@example.net",
+    "phone": "07700 900045",
+    "account": {
+      "accountNumber": "38773030",
+      "sortCode": "24-82-30",
+      "product": "car_finance",
+      "balancePence": 920089,
+      "arrearsPence": 30119,
+      "arrearsStatus": "one_missed",
+      "openedOn": "2024-10-01"
+    }
+  },
+  {
+    "id": "CUST-01029",
+    "fullName": "Rylee Hill",
+    "dateOfBirth": "1972-08-22",
+    "address": {
+      "line1": "152 Hussain Close",
+      "town": "Leeds",
+      "postcode": "LS15 9PG"
+    },
+    "email": "rylee.hill21@example.net",
+    "phone": "07700 900800",
+    "account": {
+      "accountNumber": "82330496",
+      "sortCode": "42-39-10",
+      "product": "car_finance",
+      "balancePence": 942278,
+      "arrearsPence": 0,
+      "arrearsStatus": "up_to_date",
+      "openedOn": "2025-06-01"
+    }
+  },
+  {
+    "id": "CUST-01094",
+    "fullName": "Claude Patel",
+    "dateOfBirth": "1997-02-21",
+    "address": {
+      "line1": "147 Smith Street",
+      "town": "Glasgow",
+      "postcode": "G7 9BU"
+    },
+    "email": "claude_patel71@example.org",
+    "phone": "0161 496 0047",
+    "account": {
+      "accountNumber": "68350854",
+      "sortCode": "29-33-51",
+      "product": "personal_loan",
+      "balancePence": 1047806,
+      "arrearsPence": 35119,
+      "arrearsStatus": "one_missed",
+      "openedOn": "2025-09-01"
+    }
+  },
+  {
+    "id": "CUST-01104",
+    "fullName": "Vera Davis",
+    "dateOfBirth": "1996-06-19",
+    "address": {
+      "line1": "169 Holloway Avenue",
+      "town": "Leeds",
+      "postcode": "LS14 7JJ"
+    },
+    "email": "vera.davis3@example.net",
+    "phone": "0121 496 0601",
+    "account": {
+      "accountNumber": "11963015",
+      "sortCode": "17-34-36",
+      "product": "personal_loan",
+      "balancePence": 51674,
+      "arrearsPence": 13334,
+      "arrearsStatus": "two_missed",
+      "openedOn": "2024-12-01"
+    }
+  },
+  {
+    "id": "CUST-01116",
+    "fullName": "Sherry Scott",
+    "dateOfBirth": "1973-04-08",
+    "address": {
+      "line1": "44 Phillips Road",
+      "town": "Sheffield",
+      "postcode": "S7 3DZ"
+    },
+    "email": "sherry.scott97@example.net",
+    "phone": "0121 496 0355",
+    "account": {
+      "accountNumber": "66264197",
+      "sortCode": "69-41-51",
+      "product": "personal_loan",
+      "balancePence": 858384,
+      "arrearsPence": 27833,
+      "arrearsStatus": "one_missed",
+      "openedOn": "2025-05-01"
+    }
+  },
+  {
+    "id": "CUST-01300",
+    "fullName": "Grover Bowen",
+    "dateOfBirth": "1971-11-30",
+    "address": {
+      "line1": "6 Ahmed Close",
+      "town": "Manchester",
+      "postcode": "M18 1DP"
+    },
+    "email": "grover_bowen@example.com",
+    "phone": "0121 496 0052",
+    "account": {
+      "accountNumber": "91808227",
+      "sortCode": "25-54-46",
+      "product": "personal_loan",
+      "balancePence": 1665274,
+      "arrearsPence": 288900,
+      "arrearsStatus": "three_or_more_missed",
+      "openedOn": "2025-03-01"
+    }
+  },
+  {
+    "id": "CUST-01340",
+    "fullName": "Llewellyn Shaw",
+    "dateOfBirth": "1953-07-01",
+    "address": {
+      "line1": "113 Ferguson Lane",
+      "town": "Nottingham",
+      "postcode": "NG8 7YE"
+    },
+    "email": "llewellyn.shaw@example.org",
+    "phone": "0121 496 0260",
+    "account": {
+      "accountNumber": "25386695",
+      "sortCode": "55-51-35",
+      "product": "personal_loan",
+      "balancePence": 827007,
+      "arrearsPence": 0,
+      "arrearsStatus": "up_to_date",
+      "openedOn": "2025-01-01"
+    }
+  },
+  {
+    "id": "CUST-01619",
+    "fullName": "Tressie Smith-Evans",
+    "dateOfBirth": "1957-01-08",
+    "address": {
+      "line1": "99 Ward Lane",
+      "town": "Newcastle upon Tyne",
+      "postcode": "NE11 4TN"
+    },
+    "email": "tressie.smithevans21@example.net",
+    "phone": "0161 496 0352",
+    "account": {
+      "accountNumber": "22279573",
+      "sortCode": "80-47-25",
+      "product": "car_finance",
+      "balancePence": 900709,
+      "arrearsPence": 0,
+      "arrearsStatus": "up_to_date",
+      "openedOn": "2025-04-01"
+    }
+  }
+]

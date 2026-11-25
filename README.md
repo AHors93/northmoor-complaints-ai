@@ -11,6 +11,7 @@ Needs Node 22, pnpm and Docker. `pnpm i` also installs a pre-commit hook: lint, 
 pnpm i
 pnpm lint && pnpm typecheck && pnpm test
 pnpm db:up   # Postgres 16 + pgvector on localhost:5433 (override with POSTGRES_PORT)
+pnpm gen     # synthetic data in data/generated (see data/generator)
 ```
 
 ## How this was built
