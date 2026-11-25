@@ -6,3 +6,5 @@ packages:
 allowBuilds:
   # Not needed: the prepare script installs the hooks.
   lefthook: false
+  # Not needed: its platform binary comes from an optional dependency.
+  esbuild: false

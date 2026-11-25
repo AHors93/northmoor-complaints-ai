@@ -145,6 +145,7 @@ data "aws_iam_policy_document" "deploy" {
       "iam:PutRolePolicy",
       "iam:TagRole",
       "iam:UntagRole",
+      "iam:UpdateAssumeRolePolicy",
       "iam:UpdateRole",
     ]
     resources = local.app_roles

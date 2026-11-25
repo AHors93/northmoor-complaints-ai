@@ -6,6 +6,11 @@
   "dependencies": {
     "@aws-sdk/client-kms": "3.1171.0",
     "@northmoor/shared": "workspace:*",
-    "@northmoor/tool-tokens": "workspace:*"
+    "@northmoor/tool-tokens": "workspace:*",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "8.10.164",
+    "esbuild": "0.28.2"
   }
 }

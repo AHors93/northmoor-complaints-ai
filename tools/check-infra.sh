@@ -1,7 +1,9 @@
 #!/bin/sh
-# Every Terraform check. Needs terraform, tflint and trivy (or Docker), and no AWS credentials.
+# Every Terraform check. Needs node_modules, terraform, tflint and trivy (or Docker), and no AWS credentials.
 set -eu
 cd "$(dirname "$0")/.."
+# Terraform reads the Lambda bundles.
+node --experimental-strip-types --disable-warning=ExperimentalWarning services/api/scripts/build.ts
 export TF_PLUGIN_CACHE_DIR="$PWD/.local/terraform-plugins"
 mkdir -p "$TF_PLUGIN_CACHE_DIR"
 cd infra

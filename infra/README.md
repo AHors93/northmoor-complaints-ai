@@ -29,6 +29,7 @@ Each `apply` creates billable resources.
 5. Terraform can't prompt for an MFA code, so get temporary credentials first:
 
    ```sh
+   pnpm build:lambdas
    cd infra
    eval "$(aws configure export-credentials --profile northmoor --format env)"
    terraform init -backend-config=bucket=<state_bucket output> -backend-config=region=eu-west-2
