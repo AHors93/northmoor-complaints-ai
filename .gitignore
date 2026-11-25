@@ -12,6 +12,9 @@ coverage/
 *.tfstate
 *.tfstate.*
 *.tfplan
+*.auto.tfvars
+*.tfbackend
+infra/modules/*/.terraform.lock.hcl
 # Data: only the small sample is committed
 data/generated/*
 !data/generated/sample/
