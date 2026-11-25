@@ -25,3 +25,12 @@ updates:
     groups:
       actions:
         patterns: ['*']
+  - package-ecosystem: terraform
+    directories: [/infra, /infra/bootstrap, /infra/modules/*]
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 7
+    groups:
+      terraform:
+        patterns: ['*']
