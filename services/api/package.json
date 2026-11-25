@@ -2,5 +2,10 @@
   "name": "@northmoor/api",
   "version": "0.0.0",
   "private": true,
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@aws-sdk/client-kms": "3.1171.0",
+    "@northmoor/shared": "workspace:*",
+    "@northmoor/tool-tokens": "workspace:*"
+  }
 }
