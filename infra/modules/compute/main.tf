@@ -1,4 +1,3 @@
-# The HTTP API and Lambdas are added with the API code.
 resource "aws_kms_key" "tool_tokens" {
   description              = "${var.name} tool token signing"
   key_usage                = "SIGN_VERIFY"

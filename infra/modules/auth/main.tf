@@ -21,6 +21,14 @@ resource "aws_cognito_user_pool" "this" {
     temporary_password_validity_days = 1
   }
 
+  # Puts role, team and scopes in the access token.
+  lambda_config {
+    pre_token_generation_config {
+      lambda_arn     = var.pre_token_lambda_arn
+      lambda_version = "V2_0"
+    }
+  }
+
   # Row-level security depends on this. The app client has no permission to write it.
   schema {
     name                = "team"
@@ -43,7 +51,11 @@ resource "aws_cognito_user_pool_client" "this" {
   name         = var.name
   user_pool_id = aws_cognito_user_pool.this.id
 
-  explicit_auth_flows           = ["ALLOW_USER_SRP_AUTH", "ALLOW_REFRESH_TOKEN_AUTH"]
+  # The admin flow needs IAM credentials. The test-user check uses it in dev.
+  explicit_auth_flows = concat(
+    ["ALLOW_USER_SRP_AUTH", "ALLOW_REFRESH_TOKEN_AUTH"],
+    var.allow_admin_password_auth ? ["ALLOW_ADMIN_USER_PASSWORD_AUTH"] : [],
+  )
   prevent_user_existence_errors = "ENABLED"
   enable_token_revocation       = true
   read_attributes               = ["email", "name", "custom:team"]

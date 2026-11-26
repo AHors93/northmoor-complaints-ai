@@ -66,13 +66,24 @@ module "data" {
 }
 
 module "auth" {
-  source = "./modules/auth"
-  name   = local.name
+  source                    = "./modules/auth"
+  name                      = local.name
+  pre_token_lambda_arn      = module.compute.pre_token_lambda_arn
+  allow_admin_password_auth = var.env == "dev"
 }
 
 module "compute" {
-  source = "./modules/compute"
-  name   = local.name
+  source                   = "./modules/compute"
+  name                     = local.name
+  region                   = var.region
+  account_id               = var.account_id
+  user_pool_id             = module.auth.user_pool_id
+  user_pool_arn            = module.auth.user_pool_arn
+  client_id                = module.auth.client_id
+  lambda_dir               = "${path.root}/../services/api/dist"
+  role_path                = "/${var.project}/app/"
+  permissions_boundary_arn = "arn:aws:iam::${var.account_id}:policy/${var.project}/bootstrap/${var.project}-app-boundary"
+  log_groups               = module.observability.log_groups
 }
 
 module "audit" {

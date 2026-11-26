@@ -17,3 +17,11 @@ output "user_pool_id" {
 output "tool_token_key_arn" {
   value = module.compute.tool_token_key_arn
 }
+
+output "client_id" {
+  value = module.auth.client_id
+}
+
+output "api_url" {
+  value = module.compute.api_url
+}

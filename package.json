@@ -14,6 +14,8 @@
     "test": "vitest run",
     "gen": "node --experimental-strip-types --disable-warning=ExperimentalWarning data/generator/src/cli.ts",
     "gen:sample": "pnpm gen --sample",
+    "build:lambdas": "node --experimental-strip-types --disable-warning=ExperimentalWarning services/api/scripts/build.ts",
+    "test-users": "node --experimental-strip-types --disable-warning=ExperimentalWarning services/api/scripts/test-users.ts",
     "check:infra": "sh tools/check-infra.sh",
     "db:up": "docker compose up -d --wait",
     "db:down": "docker compose down"
