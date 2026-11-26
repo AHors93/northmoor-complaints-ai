@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@aws-sdk/client-kms": "3.1171.0",
+    "@aws-sdk/client-kms": "3.1172.0",
     "@northmoor/shared": "workspace:*",
     "@northmoor/tool-tokens": "workspace:*",
     "zod": "4.6.7"
