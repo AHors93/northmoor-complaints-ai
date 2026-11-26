@@ -26,7 +26,9 @@ Each `apply` creates billable resources.
    ```
 
 4. Create `infra/local.auto.tfvars` (gitignored) with `account_id` and `budget_email`.
-5. Terraform can't prompt for an MFA code, so get temporary credentials first:
+5. Terraform can't prompt for an MFA code. In a real terminal (not an editor or agent shell, which can't
+   take typed input), run `aws sts get-caller-identity --profile northmoor` and enter the code. The CLI
+   caches the role's credentials for an hour. Then export them for Terraform:
 
    ```sh
    pnpm build:lambdas
