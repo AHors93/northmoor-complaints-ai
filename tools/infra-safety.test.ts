@@ -1,4 +1,5 @@
-import { globSync, readFileSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
+import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { findInfraViolations } from './infra-safety.js';
@@ -7,10 +8,15 @@ const infra = resolve(import.meta.dirname, '../infra');
 const check = (source: string) => findInfraViolations({ 'x.tf': source });
 
 describe('infra safety', () => {
-  it('finds no violations in the real Terraform', () => {
-    const paths = globSync('**/*.{tf,tfvars}', { cwd: infra }).filter(
-      (p) => !p.includes('.terraform/'),
-    );
+  it('finds no violations in the committed Terraform', () => {
+    // Committed files only: gitignored local settings, such as local.auto.tfvars, must hold the
+    // account id.
+    const paths = execFileSync('git', ['ls-files', '-z', '--', '*.tf', '*.tfvars'], {
+      cwd: infra,
+      encoding: 'utf8',
+    })
+      .split('\0')
+      .filter(Boolean);
     expect(paths).toContain('versions.tf');
     const files = Object.fromEntries(
       paths.map((p) => [p, readFileSync(resolve(infra, p), 'utf8')]),

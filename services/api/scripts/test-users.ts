@@ -1,7 +1,7 @@
 /**
  * Dev only. `create` makes the four test users; `check` signs each one in and calls GET /me.
  * Uses the AWS CLI with the caller's credentials. Passwords go to a gitignored file that only the
- * owner can read, and are passed to the CLI on stdin so they don't appear in the process list.
+ * owner can read, and reach the CLI through a private temporary file, never the process list.
  */
 import { execFileSync } from 'node:child_process';
 import { randomBytes } from 'node:crypto';
@@ -9,6 +9,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { parseArgs } from 'node:util';
 import { z } from 'zod';
+import { withPrivateFile } from './private-file.ts';
 
 const PASSWORDS = join(import.meta.dirname, '../../../.local/test-users.json');
 const USERS = [
@@ -35,19 +36,21 @@ function required(name: 'pool' | 'client' | 'api' | 'region'): string {
 }
 
 function cognito(command: string, input: object): unknown {
-  const output = execFileSync(
-    'aws',
-    [
-      'cognito-idp',
-      command,
-      '--region',
-      required('region'),
-      '--output',
-      'json',
-      '--cli-input-json',
-      'file:///dev/stdin',
-    ],
-    { input: JSON.stringify(input), encoding: 'utf8', stdio: ['pipe', 'pipe', 'inherit'] },
+  const output = withPrivateFile(JSON.stringify(input), (path) =>
+    execFileSync(
+      'aws',
+      [
+        'cognito-idp',
+        command,
+        '--region',
+        required('region'),
+        '--output',
+        'json',
+        '--cli-input-json',
+        `file://${path}`,
+      ],
+      { encoding: 'utf8', stdio: ['ignore', 'pipe', 'inherit'] },
+    ),
   );
   return output.trim() === '' ? null : JSON.parse(output);
 }
